@@ -1,5 +1,7 @@
 package com.chc.apirest.service;
 
+import com.chc.apirest.entity.Usuario;
+
 import java.util.List;
 
 public interface IGestionUsuarios {

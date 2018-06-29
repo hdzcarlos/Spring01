@@ -14,8 +14,8 @@ import javax.validation.constraints.Email;
 @AllArgsConstructor
 public class Usuario {
 
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
-    @GeneratedValue
     private Long id;
     @Column(name = "nombre")
     private String nombre;

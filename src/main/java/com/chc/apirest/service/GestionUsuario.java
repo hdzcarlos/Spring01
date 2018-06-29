@@ -56,15 +56,20 @@ public class GestionUsuario implements IGestionUsuarios {
     }
     @Override
     public boolean actualizarUsuario(Long id) {
-      Usuario usuario = new Usuario();
-      usuarioRepository.findById(usuario.getId());
+        /**
+         * Esta sentencia dice que si viene o no un usuario , accedemos a buscarlo por id,
+         * y si esta presente lo que va hacer es recuperar el usuario.
+         */
+       // Optional<Usuario> user = usuarioRepository.findById(id);
+       // if(user.isPresent())usuarioRepository.save(user.get());
 
         return true;
     }
     @Override
     public boolean eliminarUsuario(Long id) {
-       // Usuario usuario = new Usuario();
-        Optional<Usuario> listaUsers = usuarioRepository.findById(id);
-        return true;
+          usuarioRepository.deleteById(id);
+          return true;
+
+
     }
 }
